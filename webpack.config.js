@@ -3,6 +3,7 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const InterpolateHtmlPlugin = require("interpolate-html-plugin");
 
 const config = {
   entry: "./src/index.js",
@@ -11,7 +12,6 @@ const config = {
     port: 9000,
     hot: true,
   },
-  devtool: "inline-source-map",
   output: {
     publicPath: "/",
     path: path.resolve(__dirname, "build"),
@@ -79,12 +79,15 @@ const config = {
       filename: "index.html",
       manifest: "./public/manifest.json",
     }),
+    new InterpolateHtmlPlugin({ PUBLIC_URL: "static" }),
   ],
 };
 
 module.exports = (env, argv) => {
   if (argv.mode === "development") {
-    config.devtool = "source-map";
+    config.optimization = {
+      concatenateModules: true,
+    };
   }
 
   if (argv.mode === "production") {

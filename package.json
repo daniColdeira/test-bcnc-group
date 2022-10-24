@@ -36,7 +36,7 @@
     "eject": "react-scripts eject",
     "dev": "webpack-dev-server --mode development",
     "prod": "webpack-dev-server --mode production",
-    "buildWebpack": "webpack  --mode production"
+    "buildWebpack": "webpack --mode production"
   },
   "eslintConfig": {
     "extends": [
@@ -74,6 +74,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "interpolate-html-plugin": "^4.0.0",
     "mini-css-extract-plugin": "^2.6.1",
     "prettier": "^2.3.1",
     "style-loader": "^3.3.1",
