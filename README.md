@@ -21,6 +21,9 @@ Runs the app in the production mode.\
 Concatenated and minified assets served.\
 Open [http://localhost:9000](http://localhost:9000) to view it in your browser.
 
+Using webpack-dev-serve in the production mode.\
+The page will reload when you make changes.
+
 ### `npm run devBuild`
 
 Builds the app for dev to the `build` folder.\
