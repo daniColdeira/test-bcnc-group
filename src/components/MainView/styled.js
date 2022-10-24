@@ -67,8 +67,12 @@ export const MinWidth = styled.div`
 `;
 
 export const PodcastListDiv = styled.div`
-  min-height: 710px;
+  min-height: 650px;
   max-width: 1050px;
+`;
+
+export const MarginBottom = styled.div`
+  margin-bottom: 30px;
 `;
 
 export const MinWidthGrey = styled.div`

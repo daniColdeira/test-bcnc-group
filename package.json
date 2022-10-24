@@ -34,9 +34,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "webpack-dev-server --mode development",
-    "prod": "webpack-dev-server --mode production",
-    "buildWebpack": "webpack --mode production"
+    "devServer": "webpack-dev-server --mode development",
+    "prodServer": "webpack-dev-server --mode production",
+    "devBuild": "webpack --mode development",
+    "prodBuild": "webpack --mode production"
   },
   "eslintConfig": {
     "extends": [

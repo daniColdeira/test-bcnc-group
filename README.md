@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm run dev`
+### `npm run devServer`
 
 Runs the app in the development mode.\
 The assets are served without minimizing.\
@@ -15,18 +15,26 @@ Open [http://localhost:9000](http://localhost:9000) to view it in your browser.
 Using webpack-dev-serve in the development mode.\
 The page will reload when you make changes.
 
-### `npm run prod`
+### `npm run prodServer`
 
 Runs the app in the production mode.\
 Concatenated and minified assets served.\
 Open [http://localhost:9000](http://localhost:9000) to view it in your browser.
 
-### `npm run buildWebpack`
+### `npm run devBuild`
+
+Builds the app for dev to the `build` folder.\
+It correctly bundles React in dev mode and optimizes the build for the best performance.
+
+The build assets are served without minimizing.
+Your app is ready to be deployed!
+
+### `npm run prodBuild`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames.
+The build concatenated and minified assets.
 Your app is ready to be deployed!
 
 ### `yarn start`

@@ -20,7 +20,7 @@ function EpisodesList({ episodes, page, podcast }) {
         <Width15>Date</Width15>
         <Width15>Duration</Width15>
       </Episode>
-      {episodes?.slice((page - 1) * 20, (page - 1) * 20 + 20).map((episode) => (
+      {episodes?.slice((page - 1) * 14, (page - 1) * 14 + 14).map((episode) => (
         <Child key={episode.trackId}>
           <RouterLink
             to={`/podcast/${podcast.collectionId}/episode/${episode.trackId}`}

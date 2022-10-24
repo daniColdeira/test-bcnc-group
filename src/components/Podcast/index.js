@@ -52,7 +52,7 @@ function Podcast() {
             <CountDiv>{`Episodes: ${podcast?.trackCount}`} </CountDiv>
             <EpisodesList episodes={episodes} page={page} podcast={podcast} />
             <PaginationControlled
-              count={episodes ? Math.ceil(episodes.length / 20) : 0}
+              count={episodes ? Math.ceil(episodes.length / 14) : 0}
               setPage={setPage}
               page={page}
             />

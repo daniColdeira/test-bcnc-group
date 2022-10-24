@@ -26,7 +26,7 @@ function PodcastsList() {
           <PodcastListDiv>
             <ListPodcasts>
               {filterPodcasts
-                .slice((page - 1) * 16, (page - 1) * 16 + 16)
+                .slice((page - 1) * 12, (page - 1) * 12 + 12)
                 .map((podcast) => (
                   <RouterLink
                     to={`/podcast/${podcast.id.attributes["im:id"]}`}
@@ -47,7 +47,7 @@ function PodcastsList() {
             </ListPodcasts>
           </PodcastListDiv>
           <PaginationControlled
-            count={filterPodcasts ? Math.ceil(filterPodcasts.length / 16) : 0}
+            count={filterPodcasts ? Math.ceil(filterPodcasts.length / 12) : 0}
             setPage={setPage}
             page={page}
           />
