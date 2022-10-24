@@ -22,6 +22,7 @@ function MainView() {
 
   const handleChange = (event) => {
     const { value } = event.target;
+    // Finds matches on author name or title
     const filterName = podcasts.filter((podcast) =>
       podcast["im:name"].label.toLowerCase().includes(value.toLowerCase())
     );
@@ -29,6 +30,7 @@ function MainView() {
       podcast["im:artist"].label.toLowerCase().includes(value.toLowerCase())
     );
     const currentFilterPodcasts = [...filterName, ...filterAuthors];
+    // Removed duplicates
     const result = currentFilterPodcasts.filter((item, index) => {
       return currentFilterPodcasts.indexOf(item) === index;
     });
@@ -39,7 +41,7 @@ function MainView() {
   const handleOnSubmit = () => {};
 
   useEffect(() => {
-    // Obtiene la primera página de la lista de usuarios
+    // Collects the localStorage variable, if it does not exist the api call is made
     const listPodcasts = ls.get("listPodcasts");
     if (listPodcasts) {
       if (podcasts.length === 0) {

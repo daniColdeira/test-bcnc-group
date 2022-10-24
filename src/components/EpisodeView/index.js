@@ -24,6 +24,7 @@ function Podcast() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    // Check if there is no value in the store or if it is not the podcast that contains the episode searched for
     if (episodes.length === 0 || !findEpisode(episodes, episodeId))
       checkPodcast(podcastId, dispatch, types);
   }, []);
