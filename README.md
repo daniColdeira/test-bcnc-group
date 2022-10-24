@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm run dev`
 
 Runs the app in the development mode.\
-The assets are served without minimizing (they can be concatenated if you want).\
+The assets are served without minimizing.\
 Open [http://localhost:9000](http://localhost:9000) to view it in your browser.
 
 Using webpack-dev-serve in the development mode.\
