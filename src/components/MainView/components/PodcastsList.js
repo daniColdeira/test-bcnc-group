@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Link as RouterLink } from "react-router-dom";
 import PaginationControlled from "./Pagination";
 import {
   Link,
@@ -9,8 +8,9 @@ import {
   MinWidthGrey,
   PodcastListDiv,
   ListPodcasts,
+  StyledImage,
+  StyledLink,
 } from "../styled";
-import "../../../App.css";
 
 function PodcastsList() {
   const { loading, filterPodcasts } = useSelector((state) => ({
@@ -28,21 +28,19 @@ function PodcastsList() {
               {filterPodcasts
                 .slice((page - 1) * 12, (page - 1) * 12 + 12)
                 .map((podcast) => (
-                  <RouterLink
+                  <StyledLink
                     to={`/podcast/${podcast.id.attributes["im:id"]}`}
-                    className="link-podcast"
                     key={podcast.id.attributes["im:id"]}
                   >
                     <Link>
-                      <img
+                      <StyledImage
                         src={podcast["im:image"][0].label}
                         alt="podcast_image"
-                        className="link-image"
                       />
                       <MinWidth>{podcast["im:name"].label}</MinWidth>
                       <MinWidthGrey>{`Author: ${podcast["im:artist"].label}`}</MinWidthGrey>
                     </Link>
-                  </RouterLink>
+                  </StyledLink>
                 ))}
             </ListPodcasts>
           </PodcastListDiv>

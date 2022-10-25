@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const rotate = keyframes`
   0% {
@@ -21,6 +22,12 @@ export const CenterDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const StyledLink = styled(Link)`
+  padding: 10px 0;
+  color: black;
+  text-decoration: none;
 `;
 
 export const HeaderContainer = styled.div`

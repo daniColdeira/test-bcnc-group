@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const WrapperInfo = styled.div`
   cursor: pointer;
@@ -19,6 +20,15 @@ export const WrapperInfo = styled.div`
   -webkit-box-shadow: 5px 4px 5px 0px rgba(197, 201, 199, 1);
   -moz-box-shadow: 5px 4px 5px 0px rgba(197, 201, 199, 1);
   box-shadow: 5px 4px 5px 0px rgba(197, 201, 199, 1);
+`;
+
+export const StyledLink = styled(Link)`
+  padding: 10px 0;
+  margin: 10px 0;
+  border-top: 2px solid rgba(197, 201, 199, 0.3);
+  border-bottom: 2px solid rgba(197, 201, 199, 0.3);
+  text-decoration: none;
+  color: black;
 `;
 
 export const InfoDiv = styled.div`

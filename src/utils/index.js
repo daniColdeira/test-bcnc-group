@@ -1,14 +1,21 @@
 const ls = require("localstorage-ttl");
 
 export const getDuration = (time) => {
-  const seg =
-    (time / 1000) % 60 < 10 ? `0${(time / 1000) % 60}` : (time / 1000) % 60;
-  return `${Math.trunc(time / 1000 / 60)}:${seg}`;
+  let seconds = Math.floor((time / 1000) % 60);
+  let minutes = Math.floor((time / (1000 * 60)) % 60);
+  const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+
+  minutes = minutes < 10 ? `0${minutes}` : minutes;
+  seconds = seconds < 10 ? `0${seconds}` : seconds;
+
+  if (hours === 0) return `${minutes}:${seconds}`;
+
+  return `${hours}:${minutes}:${seconds}`;
 };
 
 export const getDate = (isoDate) => {
   const date = new Date(isoDate);
-  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+  return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 };
 
 export const findEpisode = (episodes, episodeId) => {

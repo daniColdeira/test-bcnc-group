@@ -38,7 +38,7 @@ export function* fetchPodcasts() {
     yield put({ type: types.GET_PODCASTS_FAILURE, payload: e.message });
   }
 }
-// worker Saga: will be fired on GET_PODCASTS_REQUEST actions
+// worker Saga: will be fired on GET_PODCAST_REQUEST actions
 export function* fetchPodcast({ payload: id }) {
   try {
     const user = yield call(fetchPodcastDetail, id);

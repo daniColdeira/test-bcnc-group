@@ -1,9 +1,7 @@
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LoadingSpinner from "./LoadingSpinner";
-import { HeaderContainer, HeaderDiv } from "./styled";
-import "../../App.css";
+import { HeaderContainer, HeaderDiv, StyledLink } from "./styled";
 
 function Header() {
   const { loadingPodcasts, loadingPodcast } = useSelector((state) => ({
@@ -13,9 +11,7 @@ function Header() {
   return (
     <HeaderDiv>
       <HeaderContainer>
-        <RouterLink to="/" className="link-header">
-          Podcaster
-        </RouterLink>
+        <StyledLink to="/">Podcaster</StyledLink>
         {loadingPodcasts ||
           (loadingPodcast && (
             <div>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as RouterLink } from "react-router-dom";
 
 export const CenterDiv = styled.div`
   display: flex;
@@ -93,6 +94,19 @@ export const Close = styled.div`
   &:hover {
     color: red;
   }
+`;
+
+export const StyledImage = styled.img`
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;
+`;
+
+export const StyledLink = styled(RouterLink)`
+  width: 207px;
+  text-decoration: none;
 `;
 
 export const ListPodcasts = styled.div`

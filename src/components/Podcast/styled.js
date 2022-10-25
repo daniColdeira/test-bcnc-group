@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as RouterLink } from "react-router-dom";
 
 export const CenterDiv = styled.div`
   display: flex;
@@ -13,6 +14,16 @@ export const Input = styled.input`
   background: rgb(146, 160, 166, 0.2);
   border: none;
   border-radius: 3px;
+`;
+
+export const LinkEpisode = styled(RouterLink)`
+  width: 100%;
+  text-decoration: none;
+  border-top: 2px solid rgba(197, 201, 199, 0.3);
+  font-size: 14px;
+  color: "royalblue";
+  padding: 10px 0;
+  display: flex;
 `;
 
 export const Bold = styled.div`
