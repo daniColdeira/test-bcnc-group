@@ -98,8 +98,7 @@ export const Close = styled.div`
 export const ListPodcasts = styled.div`
   margin-bottom: 50px;
   display: flex;
-  gap: 10px;
-
+  gap: 30px;
   height: min-content;
   align-items: start;
   justify-content: center;
