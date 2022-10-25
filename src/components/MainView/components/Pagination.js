@@ -17,6 +17,8 @@ export default function PaginationControlled({ count, setPage, page }) {
           onChange={handleChange}
           showFirstButton
           showLastButton
+          variant="outlined"
+          color="primary"
         />
       </Stack>
     </MarginBottom>

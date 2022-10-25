@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import {
   GET_PODCASTS_SUCCESS,
   GET_PODCASTS_FAILURE,
