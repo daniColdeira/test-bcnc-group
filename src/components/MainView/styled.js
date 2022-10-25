@@ -26,7 +26,8 @@ export const CountDiv = styled.div`
 `;
 
 export const SearchInputDiv = styled.div`
-  width: 1050px;
+  width: 80%;
+  max-width: 1050px;
   display: flex;
   justify-content: end;
   padding: 20px 0 40px;
